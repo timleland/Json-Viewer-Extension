@@ -4,6 +4,6 @@ The Best [JSON Viewer Extension](https://timleland.com/json-viewer-extension/)
 
 This extension makes JSON responses easy to read.
 
-**Extensions:** [TimLeland.com/extensions](http://timleland.com/extensions)
+**Extensions:** [TimLeland.com/extensions](https://timleland.com/extensions)
 
-**Blog:** [TimLeland.com/](http://timleland.com/)
+**Blog:** [TimLeland.com](https://timleland.com/)
