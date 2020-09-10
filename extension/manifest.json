@@ -8,7 +8,8 @@
 		{
 			"matches": ["<all_urls>"],
 			"js": ["vendor/jquery-3.3.1.min.js", "vendor/json-viewer/jquery.json-viewer.js", "js/main.js"],
-			"css": ["vendor/json-viewer/jquery.json-viewer.css"]
+			"css": ["vendor/json-viewer/jquery.json-viewer.css"],
+			"run_at": "document_start"
 		}
 	],
 	"background": {
@@ -18,6 +19,5 @@
 		"16": "icon16.png",
 		"48": "icon48.png",
 		"128": "icon128.png"
-	},
-	"permissions": ["activeTab"]
+	}
 }
