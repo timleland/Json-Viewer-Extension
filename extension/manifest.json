@@ -6,7 +6,7 @@
 	"version": "1.0.0",
 	"content_scripts": [
 		{
-			"matches": ["<all_urls>"],
+			"matches": ["http://*/*", "https://*/*", "ftp://*/*", "file://*", "file:///*"],
 			"js": ["vendor/jquery-3.3.1.min.js", "vendor/json-viewer/jquery.json-viewer.js", "js/main.js"],
 			"css": ["vendor/json-viewer/jquery.json-viewer.css"],
 			"run_at": "document_start"
