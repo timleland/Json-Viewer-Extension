@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+	"name": "JSON Viewer",
+	"description": "Makes JSON responses easy to read.",
+	"version": "1.0.0",
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["vendor/jquery-3.3.1.min.js", "vendor/json-viewer/jquery.json-viewer.js", "main.js"],
+			"css": ["vendor/json-viewer/jquery.json-viewer.css"]
+		}
+	],
+
+	"icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"permissions": ["activeTab"]
+}
