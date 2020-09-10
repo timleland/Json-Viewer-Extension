@@ -3,10 +3,10 @@
 	"name": "JSON Viewer",
 	"homepage_url": "https://timleland.com/json-viewer-extension",
 	"description": "Makes JSON response easy to read.",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"content_scripts": [
 		{
-			"matches": ["http://*/*", "https://*/*", "ftp://*/*", "file://*", "file:///*"],
+			"matches": ["<all_urls>"],
 			"js": ["vendor/jquery-3.3.1.min.js", "vendor/json-viewer/jquery.json-viewer.js", "js/main.js"],
 			"css": ["vendor/json-viewer/jquery.json-viewer.css"],
 			"run_at": "document_start"
