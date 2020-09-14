@@ -10,3 +10,5 @@ This extension makes JSON responses easy to read.
 **Extensions:** [TimLeland.com/extensions](https://timleland.com/extensions)
 
 **Blog:** [TimLeland.com](https://timleland.com/)
+
+**Sample JSON API:** [Demo JSON](http://dummy.restapiexample.com/api/v1/employees)
