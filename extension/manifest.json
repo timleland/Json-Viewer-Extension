@@ -1,20 +1,20 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"name": "JSON Viewer",
 	"homepage_url": "https://timleland.com/json-viewer-extension",
-	"description": "Makes JSON response easy to read.",
-	"version": "1.0.2",
+	"description": "Open source JSON viewer with syntax highlighting, collapsible trees, clickable URLs, and raw/parsed toggle.",
+	"version": "2.1.0",
+	"background": {
+		"service_worker": "js/background.js"
+	},
 	"content_scripts": [
 		{
 			"matches": ["<all_urls>"],
-			"js": ["vendor/jquery-3.3.1.min.js", "vendor/json-viewer/jquery.json-viewer.js", "js/main.js"],
-			"css": ["vendor/json-viewer/jquery.json-viewer.css"],
-			"run_at": "document_start"
+			"js": ["js/main.js"],
+			"css": ["css/content.css"],
+			"run_at": "document_end"
 		}
 	],
-	"background": {
-		"scripts": ["js/background.js"]
-	},
 	"icons": {
 		"16": "icon16.png",
 		"48": "icon48.png",

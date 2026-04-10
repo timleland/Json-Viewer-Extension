@@ -1,8 +1,14 @@
 # Json Viewer Extension
 
-The Best [JSON Viewer Extension](https://timleland.com/json-viewer-extension/)
+Open source JSON viewer
 
-This extension makes JSON responses easy to read.
+## Features
+
+- JSON & JSONP support
+- Syntax highlighting
+- Collapsible trees, with indent guides
+- Clickable URLs
+- Toggle between raw and parsed JSON
 
 **Chrome Install:** [https://chrome.google.com/webstore/detail/json-viewer/bbdgkoocgebebgihgkhfhlpekclhmfem](https://chrome.google.com/webstore/detail/json-viewer/bbdgkoocgebebgihgkhfhlpekclhmfem)
 
@@ -12,3 +18,5 @@ This extension makes JSON responses easy to read.
 **Blog:** [TimLeland.com](https://timleland.com/)
 
 **Sample JSON API:** [Demo JSON](http://dummy.restapiexample.com/api/v1/employees)
+
+**Source:** [https://github.com/timleland/Json-Viewer-Extension](https://github.com/timleland/Json-Viewer-Extension)

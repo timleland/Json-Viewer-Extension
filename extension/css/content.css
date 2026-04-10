@@ -1,0 +1,353 @@
+#json-viewer-body.json-viewer-body {
+	--json-bg: #ffffff;
+	--json-text: #1f2937;
+	--json-toolbar-bg: rgba(255, 255, 255, 0.96);
+	--json-toolbar-border: #e5e7eb;
+	--json-toolbar-shadow: rgba(15, 23, 42, 0.06);
+	--json-button-bg: #ffffff;
+	--json-button-border: #cbd5e1;
+	--json-button-text: #334155;
+	--json-button-hover: #f8fafc;
+	--json-button-selected-bg: #0f172a;
+	--json-button-selected-text: #ffffff;
+	--json-meta: #64748b;
+	--json-notice-bg: #f8fafc;
+	--json-notice-text: #334155;
+	--json-notice-border: #0ea5e9;
+	--json-toast-bg: rgba(15, 23, 42, 0.94);
+	--json-toast-text: #f8fafc;
+	--json-toast-error-bg: rgba(153, 27, 27, 0.95);
+	--json-guide: #cbd5e1;
+	--json-toggle: #94a3b8;
+	--json-toggle-hover: #0f172a;
+	--json-brace: #0f172a;
+	--json-key: #0f172a;
+	--json-closing: #475569;
+	--json-string: #15803d;
+	--json-number: #1d4ed8;
+	--json-literal: #7c3aed;
+	margin: 0;
+	background: var(--json-bg);
+	color: var(--json-text);
+	color-scheme: light;
+	font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+	#json-viewer-body.json-viewer-body:not([data-theme='light']):not([data-theme='dark']) {
+		--json-bg: #0b1220;
+		--json-text: #dbe4f0;
+		--json-toolbar-bg: rgba(11, 18, 32, 0.96);
+		--json-toolbar-border: #223049;
+		--json-toolbar-shadow: rgba(0, 0, 0, 0.35);
+		--json-button-bg: #111b2e;
+		--json-button-border: #32425d;
+		--json-button-text: #c9d5e5;
+		--json-button-hover: #16233a;
+		--json-button-selected-bg: #dbe4f0;
+		--json-button-selected-text: #0b1220;
+		--json-meta: #94a3b8;
+		--json-notice-bg: #111b2e;
+		--json-notice-text: #c9d5e5;
+		--json-notice-border: #38bdf8;
+		--json-toast-bg: rgba(226, 232, 240, 0.96);
+		--json-toast-text: #0b1220;
+		--json-toast-error-bg: rgba(248, 113, 113, 0.95);
+		--json-guide: #32425d;
+		--json-toggle: #6b7f9c;
+		--json-toggle-hover: #e2e8f0;
+		--json-brace: #e2e8f0;
+		--json-key: #f8fafc;
+		--json-closing: #94a3b8;
+		--json-string: #4ade80;
+		--json-number: #60a5fa;
+		--json-literal: #c084fc;
+		color-scheme: dark;
+	}
+}
+
+#json-viewer-body.json-viewer-body[data-theme='dark'] {
+	--json-bg: #0b1220;
+	--json-text: #dbe4f0;
+	--json-toolbar-bg: rgba(11, 18, 32, 0.96);
+	--json-toolbar-border: #223049;
+	--json-toolbar-shadow: rgba(0, 0, 0, 0.35);
+	--json-button-bg: #111b2e;
+	--json-button-border: #32425d;
+	--json-button-text: #c9d5e5;
+	--json-button-hover: #16233a;
+	--json-button-selected-bg: #dbe4f0;
+	--json-button-selected-text: #0b1220;
+	--json-meta: #94a3b8;
+	--json-notice-bg: #111b2e;
+	--json-notice-text: #c9d5e5;
+	--json-notice-border: #38bdf8;
+	--json-toast-bg: rgba(226, 232, 240, 0.96);
+	--json-toast-text: #0b1220;
+	--json-toast-error-bg: rgba(248, 113, 113, 0.95);
+	--json-guide: #32425d;
+	--json-toggle: #6b7f9c;
+	--json-toggle-hover: #e2e8f0;
+	--json-brace: #e2e8f0;
+	--json-key: #f8fafc;
+	--json-closing: #94a3b8;
+	--json-string: #4ade80;
+	--json-number: #60a5fa;
+	--json-literal: #c084fc;
+	color-scheme: dark;
+}
+
+#json-viewer-body .json-viewer {
+	min-height: 100vh;
+}
+
+#json-viewer-body .json-viewer__toolbar {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 12px;
+	padding: 10px 14px;
+	background: var(--json-toolbar-bg);
+	border-bottom: 1px solid var(--json-toolbar-border);
+	box-shadow: 0 1px 3px var(--json-toolbar-shadow);
+}
+
+#json-viewer-body .json-viewer__actions {
+	display: flex;
+	gap: 6px;
+	flex-wrap: wrap;
+}
+
+#json-viewer-body .json-viewer__actions--right {
+	margin-left: auto;
+}
+
+#json-viewer-body .json-viewer__button {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	padding: 7px 10px;
+	border: 1px solid var(--json-button-border);
+	border-radius: 6px;
+	background: var(--json-button-bg);
+	color: var(--json-button-text);
+	cursor: pointer;
+	font: inherit;
+	font-weight: 600;
+}
+
+#json-viewer-body .json-viewer__button--icon {
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	padding: 0;
+	gap: 0;
+}
+
+#json-viewer-body .json-viewer__button:hover {
+	background: var(--json-button-hover);
+}
+
+#json-viewer-body .json-viewer__button.is-selected {
+	background: var(--json-button-selected-bg);
+	border-color: var(--json-button-selected-bg);
+	color: var(--json-button-selected-text);
+}
+
+#json-viewer-body .json-viewer__button:disabled {
+	cursor: wait;
+	opacity: 0.65;
+}
+
+#json-viewer-body .json-viewer__meta {
+	color: var(--json-meta);
+}
+
+#json-viewer-body .json-viewer__theme-button {
+	flex: 0 0 auto;
+}
+
+#json-viewer-body .json-viewer__theme-icon {
+	display: inline-flex;
+	width: 16px;
+	height: 16px;
+}
+
+#json-viewer-body .json-viewer__button-icon {
+	display: inline-flex;
+	width: 14px;
+	height: 14px;
+	flex: 0 0 14px;
+}
+
+#json-viewer-body .json-viewer__button-icon svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#json-viewer-body .json-viewer__button-label {
+	line-height: 1;
+}
+
+#json-viewer-body .json-viewer__theme-icon svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#json-viewer-body .json-viewer__notice {
+	margin: 12px 14px 0;
+	padding: 10px 12px;
+	border-left: 3px solid var(--json-notice-border);
+	background: var(--json-notice-bg);
+	color: var(--json-notice-text);
+}
+
+#json-viewer-body .json-viewer__toast {
+	position: fixed;
+	right: 14px;
+	bottom: 14px;
+	z-index: 20;
+	max-width: min(320px, calc(100vw - 28px));
+	padding: 10px 12px;
+	border-radius: 8px;
+	background: var(--json-toast-bg);
+	color: var(--json-toast-text);
+	box-shadow: 0 10px 30px rgba(15, 23, 42, 0.24);
+	opacity: 0;
+	transform: translateY(8px);
+	transition: opacity 160ms ease, transform 160ms ease;
+	pointer-events: none;
+}
+
+#json-viewer-body .json-viewer__toast.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+#json-viewer-body .json-viewer__toast[data-tone='error'] {
+	background: var(--json-toast-error-bg);
+	color: #ffffff;
+}
+
+#json-viewer-body .json-viewer__raw,
+#json-viewer-body .json-viewer__parsed {
+	margin: 0;
+	padding: 14px;
+}
+
+#json-viewer-body .json-viewer__raw {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+#json-viewer-body .json-viewer__tree {
+	display: block;
+}
+
+#json-viewer-body .json-viewer__node {
+	--json-indent: 0;
+}
+
+#json-viewer-body .json-viewer__line {
+	display: flex;
+	align-items: flex-start;
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+#json-viewer-body .json-viewer__line--closing {
+	color: var(--json-closing);
+}
+
+#json-viewer-body .json-viewer__children {
+	border-left: 1px dotted var(--json-guide);
+	margin-left: 6px;
+	padding-left: 6px;
+}
+
+#json-viewer-body .json-viewer__toggle,
+#json-viewer-body .json-viewer__summary {
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: inherit;
+	cursor: pointer;
+	font: inherit;
+}
+
+#json-viewer-body .json-viewer__toggle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 14px;
+	height: 14px;
+	margin-right: 4px;
+	color: var(--json-toggle);
+	flex: 0 0 14px;
+}
+
+#json-viewer-body .json-viewer__toggle:hover,
+#json-viewer-body .json-viewer__summary:hover {
+	color: var(--json-toggle-hover);
+}
+
+#json-viewer-body .json-viewer__toggle > span {
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-left: 6px solid currentColor;
+	transform: rotate(90deg);
+	transform-origin: 35% 50%;
+}
+
+#json-viewer-body .json-viewer__node[data-collapsed='true'] > .json-viewer__line .json-viewer__toggle > span {
+	transform: rotate(0deg);
+}
+
+#json-viewer-body .json-viewer__spacer {
+	display: inline-block;
+	width: 14px;
+	margin-right: 4px;
+	flex: 0 0 14px;
+}
+
+#json-viewer-body .json-viewer__key-wrap,
+#json-viewer-body .json-viewer__brace {
+	color: var(--json-brace);
+}
+
+#json-viewer-body .json-viewer__key {
+	color: var(--json-key);
+}
+
+#json-viewer-body .json-viewer__summary {
+	margin-left: 4px;
+	color: var(--json-meta);
+}
+
+#json-viewer-body .json-viewer__string,
+#json-viewer-body .json-viewer__string-value {
+	color: var(--json-string);
+}
+
+#json-viewer-body .json-viewer__number,
+#json-viewer-body .json-viewer__boolean,
+#json-viewer-body .json-viewer__null {
+	font-weight: 600;
+}
+
+#json-viewer-body .json-viewer__number {
+	color: var(--json-number);
+}
+
+#json-viewer-body .json-viewer__boolean,
+#json-viewer-body .json-viewer__null {
+	color: var(--json-literal);
+}
